@@ -3884,6 +3884,20 @@ VCC: 1.8-5.5V</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,45.72,154.94,IC1,VDD,VCC,,,"/>
+<approved hash="104,1,45.72,114.3,IC1,VSS,GND,,,"/>
+<approved hash="204,1,22.86,50.8,U$1,GND0,,,,"/>
+<approved hash="204,1,22.86,48.26,U$1,GND1,,,,"/>
+<approved hash="204,1,114.3,48.26,U$1,GND2,,,,"/>
+<approved hash="204,1,114.3,43.18,U$1,GND3,,,,"/>
+<approved hash="204,1,114.3,50.8,U$1,GND4,,,,"/>
+<approved hash="204,1,22.86,43.18,U$1,GND5,,,,"/>
+<approved hash="104,1,167.64,154.94,IC2,VDD,VCC,,,"/>
+<approved hash="104,1,167.64,114.3,IC2,VSS,GND,,,"/>
+<approved hash="206,1,45.72,144.78,!INT,,,,,"/>
+<approved hash="206,1,167.64,144.78,!INT,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
