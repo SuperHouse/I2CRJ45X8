@@ -1,17 +1,19 @@
-Home Automation Light Switch Controller
-=======================================
-Copyright 2017 SuperHouse Automation Pty Ltd  www.superhouse.tv  
+I2C to RJ45 Breakout (8 Port)
+=============================
+Copyright 2019 SuperHouse Automation Pty Ltd  www.superhouse.tv  
 
-Light switch controller for connection to SuperHouse light switches.
+8 RJ45 sockets connected to 32 I/O channels via I2C addressable
+I/O controllers. Intended for use in building a home automation light
+switch controller for connection to SuperHouse light switches.
 
 Features:
 
- * EtherMega footprint for processor and Ethernet
- * RJ45 sockets for connection to light switches over Cat-5
+ * 8 x RJ45 sockets for connection to light switches over Cat-5
+ * I2C interface with interrupt output
 
 More information:
 
-  http://www.superhouse.tv/
+  http://www.superhouse.tv/i2crj45x8
 
 INSTALLATION
 ------------
