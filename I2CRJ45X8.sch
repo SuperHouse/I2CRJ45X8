@@ -2423,29 +2423,46 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </deviceset>
 </devicesets>
 </library>
-<library name="freetronics">
+<library name="SuperHouse-Symbols" urn="urn:adsk.eagle:library:13228893">
 <packages>
-<package name="FIDUCIAL-1.5X3">
-<circle x="0" y="0" radius="0.9055" width="1.27" layer="29"/>
-<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2">
-<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
-</package>
-<package name="FIDUCIAL-1X2.5">
+<package name="FIDUCIAL-1X2.5" urn="urn:adsk.eagle:footprint:13228894/1" library_version="1">
 <circle x="0" y="0" radius="0.9" width="1.27" layer="29"/>
 <smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
 </package>
+<package name="FIDUCIAL-1.5X3" urn="urn:adsk.eagle:footprint:13228896/1" library_version="1">
+<circle x="0" y="0" radius="0.9055" width="1.27" layer="29"/>
+<smd name="1" x="0" y="0" dx="1.5" dy="1.5" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="FIDUCIAL-1X2" urn="urn:adsk.eagle:footprint:13228895/1" library_version="1">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
 </packages>
+<packages3d>
+<package3d name="FIDUCIAL-1X2.5" urn="urn:adsk.eagle:package:13228898/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="FIDUCIAL-1X2.5"/>
+</packageinstances>
+</package3d>
+<package3d name="FIDUCIAL-1.5X3" urn="urn:adsk.eagle:package:13228900/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="FIDUCIAL-1.5X3"/>
+</packageinstances>
+</package3d>
+<package3d name="FIDUCIAL-1X2" urn="urn:adsk.eagle:package:13228899/1" type="box" library_version="1">
+<packageinstances>
+<packageinstance name="FIDUCIAL-1X2"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
-<symbol name="FIDUCIAL">
+<symbol name="FIDUCIAL" urn="urn:adsk.eagle:symbol:13228897/1" library_version="1">
 <wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
 <wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
 <circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="FIDUCIAL">
+<deviceset name="FIDUCIAL" urn="urn:adsk.eagle:component:13228901/1" library_version="1">
 <description>&lt;b&gt;Fiducial Alignment Points&lt;/b&gt;
 Various fiducial points for machine vision alignment.</description>
 <gates>
@@ -2453,16 +2470,25 @@ Various fiducial points for machine vision alignment.</description>
 </gates>
 <devices>
 <device name="1.5X3" package="FIDUCIAL-1.5X3">
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:13228900/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
 <device name="1X2" package="FIDUCIAL-1X2">
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:13228899/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
 </device>
 <device name="1X2.5" package="FIDUCIAL-1X2.5">
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:13228898/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -2546,9 +2572,9 @@ Various fiducial points for machine vision alignment.</description>
 <part name="P+5" library="SuperHouse-SupplySymbols" library_urn="urn:adsk.eagle:library:11790503" deviceset="VCC" device=""/>
 <part name="GND6" library="SuperHouse-SupplySymbols" library_urn="urn:adsk.eagle:library:11790503" deviceset="GND" device=""/>
 <part name="GND7" library="SuperHouse-SupplySymbols" library_urn="urn:adsk.eagle:library:11790503" deviceset="GND" device=""/>
-<part name="FID1" library="freetronics" deviceset="FIDUCIAL" device="1X2.5"/>
-<part name="FID2" library="freetronics" deviceset="FIDUCIAL" device="1X2.5"/>
-<part name="FID3" library="freetronics" deviceset="FIDUCIAL" device="1X2.5"/>
+<part name="FID1" library="SuperHouse-Symbols" library_urn="urn:adsk.eagle:library:13228893" deviceset="FIDUCIAL" device="1X2.5" package3d_urn="urn:adsk.eagle:package:13228898/1"/>
+<part name="FID2" library="SuperHouse-Symbols" library_urn="urn:adsk.eagle:library:13228893" deviceset="FIDUCIAL" device="1X2.5" package3d_urn="urn:adsk.eagle:package:13228898/1"/>
+<part name="FID3" library="SuperHouse-Symbols" library_urn="urn:adsk.eagle:library:13228893" deviceset="FIDUCIAL" device="1X2.5" package3d_urn="urn:adsk.eagle:package:13228898/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -2901,8 +2927,33 @@ VCC: 1.8-5.5V</text>
 <junction x="48.26" y="66.04"/>
 <wire x1="96.52" y1="66.04" x2="116.84" y2="66.04" width="0.1524" layer="91"/>
 <junction x="96.52" y="66.04"/>
-<wire x1="116.84" y1="66.04" x2="116.84" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="66.04" x2="116.84" y2="50.8" width="0.1524" layer="91"/>
 <junction x="116.84" y="25.4"/>
+<pinref part="J5" gate="G$1" pin="GND4"/>
+<wire x1="116.84" y1="50.8" x2="116.84" y2="48.26" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="48.26" x2="116.84" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="43.18" x2="116.84" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="114.3" y1="50.8" x2="116.84" y2="50.8" width="0.1524" layer="91"/>
+<junction x="116.84" y="50.8"/>
+<pinref part="J5" gate="G$1" pin="GND2"/>
+<wire x1="114.3" y1="48.26" x2="116.84" y2="48.26" width="0.1524" layer="91"/>
+<junction x="116.84" y="48.26"/>
+<pinref part="J5" gate="G$1" pin="GND3"/>
+<wire x1="114.3" y1="43.18" x2="116.84" y2="43.18" width="0.1524" layer="91"/>
+<junction x="116.84" y="43.18"/>
+<pinref part="J5" gate="G$1" pin="GND0"/>
+<wire x1="22.86" y1="50.8" x2="20.32" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="50.8" x2="20.32" y2="48.26" width="0.1524" layer="91"/>
+<pinref part="J5" gate="G$1" pin="GND1"/>
+<wire x1="20.32" y1="48.26" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="20.32" y1="43.18" x2="20.32" y2="25.4" width="0.1524" layer="91"/>
+<wire x1="22.86" y1="48.26" x2="20.32" y2="48.26" width="0.1524" layer="91"/>
+<junction x="20.32" y="48.26"/>
+<pinref part="J5" gate="G$1" pin="GND5"/>
+<wire x1="22.86" y1="43.18" x2="20.32" y2="43.18" width="0.1524" layer="91"/>
+<junction x="20.32" y="43.18"/>
+<wire x1="20.32" y1="25.4" x2="40.64" y2="25.4" width="0.1524" layer="91"/>
+<junction x="40.64" y="25.4"/>
 </segment>
 <segment>
 <pinref part="IC1" gate="G$1" pin="VSS"/>
@@ -2994,7 +3045,7 @@ VCC: 1.8-5.5V</text>
 <wire x1="101.6" y1="22.86" x2="78.74" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="22.86" x2="55.88" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="22.86" x2="33.02" y2="22.86" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="22.86" x2="20.32" y2="22.86" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="22.86" x2="15.24" y2="22.86" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="27.94" x2="33.02" y2="22.86" width="0.1524" layer="91"/>
 <junction x="33.02" y="27.94"/>
 <junction x="33.02" y="22.86"/>
@@ -3020,8 +3071,8 @@ VCC: 1.8-5.5V</text>
 <wire x1="104.14" y1="60.96" x2="104.14" y2="63.5" width="0.1524" layer="91"/>
 <pinref part="J5" gate="G$1" pin="D5"/>
 <wire x1="104.14" y1="63.5" x2="101.6" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="17.78" y1="68.58" x2="20.32" y2="68.58" width="0.1524" layer="91"/>
-<wire x1="20.32" y1="68.58" x2="33.02" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="12.7" y1="68.58" x2="15.24" y2="68.58" width="0.1524" layer="91"/>
+<wire x1="15.24" y1="68.58" x2="33.02" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="68.58" x2="55.88" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="68.58" x2="78.74" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="68.58" x2="101.6" y2="68.58" width="0.1524" layer="91"/>
@@ -3036,9 +3087,9 @@ VCC: 1.8-5.5V</text>
 <wire x1="33.02" y1="63.5" x2="33.02" y2="68.58" width="0.1524" layer="91"/>
 <junction x="33.02" y="63.5"/>
 <junction x="33.02" y="68.58"/>
-<label x="17.78" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="20.32" y1="22.86" x2="20.32" y2="68.58" width="0.1524" layer="91"/>
-<junction x="20.32" y="68.58"/>
+<label x="12.7" y="68.58" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="15.24" y1="22.86" x2="15.24" y2="68.58" width="0.1524" layer="91"/>
+<junction x="15.24" y="68.58"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="5"/>
@@ -4018,6 +4069,20 @@ VCC: 1.8-5.5V</text>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,45.72,154.94,IC1,VDD,VCC,,,"/>
+<approved hash="104,1,45.72,114.3,IC1,VSS,GND,,,"/>
+<approved hash="104,1,22.86,50.8,J5,GND0,GND,,,"/>
+<approved hash="104,1,22.86,48.26,J5,GND1,GND,,,"/>
+<approved hash="104,1,114.3,48.26,J5,GND2,GND,,,"/>
+<approved hash="104,1,114.3,43.18,J5,GND3,GND,,,"/>
+<approved hash="104,1,114.3,50.8,J5,GND4,GND,,,"/>
+<approved hash="104,1,22.86,43.18,J5,GND5,GND,,,"/>
+<approved hash="104,1,167.64,154.94,IC2,VDD,VCC,,,"/>
+<approved hash="104,1,167.64,114.3,IC2,VSS,GND,,,"/>
+<approved hash="206,1,45.72,144.78,!INT,,,,,"/>
+<approved hash="206,1,167.64,144.78,!INT,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
