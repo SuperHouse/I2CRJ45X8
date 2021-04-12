@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.6.0">
+<eagle version="9.6.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2360,7 +2360,7 @@ Various fiducial points for machine vision alignment.</description>
 8: GND</text>
 <frame x1="0" y1="0" x2="248.92" y2="185.42" columns="8" rows="5" layer="94"/>
 <text x="149.86" y="12.7" size="3.048" layer="94">8 Channel I2C RJ45 Breakout</text>
-<text x="215.9" y="6.858" size="1.778" layer="94">V2.0 (2020-04-06)</text>
+<text x="215.9" y="6.858" size="1.778" layer="94">V2.2 (2021-04-12)</text>
 <text x="149.606" y="6.858" size="1.778" layer="94">www.superhouse.tv/i2crj45x8</text>
 <text x="187.96" y="6.858" size="1.778" layer="94">SKU: I2CRJ45X8</text>
 <frame x1="147.32" y1="5.08" x2="243.84" y2="17.78" columns="0" rows="0" layer="94" border-left="no" border-top="no" border-right="no" border-bottom="no"/>
@@ -2382,6 +2382,16 @@ A2 A1 A0
 111: 0x27</text>
 <text x="129.54" y="12.7" size="1.778" layer="97">VIN: 12V
 VCC: 1.8-5.5V</text>
+<text x="200.66" y="80.01" size="2.1844" layer="94">External Power</text>
+<wire x1="195.58" y1="83.82" x2="195.58" y2="38.1" width="0.2032" layer="97" style="longdash"/>
+<wire x1="195.58" y1="38.1" x2="231.14" y2="38.1" width="0.2032" layer="97" style="longdash"/>
+<wire x1="231.14" y1="38.1" x2="231.14" y2="83.82" width="0.2032" layer="97" style="longdash"/>
+<wire x1="231.14" y1="83.82" x2="195.58" y2="83.82" width="0.2032" layer="97" style="longdash"/>
+<text x="154.94" y="80.01" size="2.1844" layer="94">I2C Breakouts</text>
+<wire x1="149.86" y1="83.82" x2="149.86" y2="22.86" width="0.2032" layer="97" style="longdash"/>
+<wire x1="193.04" y1="83.82" x2="149.86" y2="83.82" width="0.2032" layer="97" style="longdash"/>
+<wire x1="193.04" y1="83.82" x2="193.04" y2="22.86" width="0.2032" layer="97" style="longdash"/>
+<wire x1="193.04" y1="22.86" x2="149.86" y2="22.86" width="0.2032" layer="97" style="longdash"/>
 </plain>
 <instances>
 <instance part="R1" gate="G$1" x="106.68" y="175.26" smashed="yes" rot="MR180">
@@ -2579,30 +2589,30 @@ VCC: 1.8-5.5V</text>
 <attribute name="NAME" x="156.4386" y="107.95" size="1.778" layer="95" rot="MR90"/>
 <attribute name="VALUE" x="156.718" y="113.03" size="1.778" layer="96" rot="MR90"/>
 </instance>
-<instance part="LED1" gate="G$1" x="226.06" y="38.1" smashed="yes">
-<attribute name="NAME" x="229.616" y="33.528" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="231.775" y="33.528" size="1.778" layer="96" rot="R90"/>
+<instance part="LED1" gate="G$1" x="203.2" y="53.34" smashed="yes">
+<attribute name="NAME" x="206.756" y="48.768" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="208.915" y="48.768" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="LED2" gate="G$1" x="236.22" y="38.1" smashed="yes">
-<attribute name="NAME" x="239.776" y="33.528" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="241.935" y="33.528" size="1.778" layer="96" rot="R90"/>
+<instance part="LED2" gate="G$1" x="213.36" y="53.34" smashed="yes">
+<attribute name="NAME" x="216.916" y="48.768" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="219.075" y="48.768" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R39" gate="G$1" x="226.06" y="48.26" smashed="yes" rot="MR90">
-<attribute name="NAME" x="227.5586" y="44.45" size="1.778" layer="95" rot="MR90"/>
-<attribute name="VALUE" x="227.838" y="49.53" size="1.778" layer="96" rot="MR90"/>
+<instance part="R39" gate="G$1" x="203.2" y="63.5" smashed="yes" rot="MR90">
+<attribute name="NAME" x="204.6986" y="59.69" size="1.778" layer="95" rot="MR90"/>
+<attribute name="VALUE" x="204.978" y="64.77" size="1.778" layer="96" rot="MR90"/>
 </instance>
-<instance part="R40" gate="G$1" x="236.22" y="48.26" smashed="yes" rot="MR90">
-<attribute name="NAME" x="237.7186" y="44.45" size="1.778" layer="95" rot="MR90"/>
-<attribute name="VALUE" x="237.998" y="49.53" size="1.778" layer="96" rot="MR90"/>
+<instance part="R40" gate="G$1" x="213.36" y="63.5" smashed="yes" rot="MR90">
+<attribute name="NAME" x="214.8586" y="59.69" size="1.778" layer="95" rot="MR90"/>
+<attribute name="VALUE" x="215.138" y="64.77" size="1.778" layer="96" rot="MR90"/>
 </instance>
-<instance part="P+5" gate="1" x="226.06" y="55.88" smashed="yes">
-<attribute name="VALUE" x="225.044" y="59.436" size="1.778" layer="96"/>
+<instance part="P+5" gate="1" x="203.2" y="71.12" smashed="yes">
+<attribute name="VALUE" x="202.184" y="74.676" size="1.778" layer="96"/>
 </instance>
-<instance part="GND6" gate="1" x="226.06" y="27.94" smashed="yes">
-<attribute name="VALUE" x="223.52" y="25.4" size="1.778" layer="96"/>
+<instance part="GND6" gate="1" x="203.2" y="43.18" smashed="yes">
+<attribute name="VALUE" x="200.66" y="40.64" size="1.778" layer="96"/>
 </instance>
-<instance part="GND7" gate="1" x="236.22" y="27.94" smashed="yes">
-<attribute name="VALUE" x="233.68" y="25.4" size="1.778" layer="96"/>
+<instance part="GND7" gate="1" x="213.36" y="43.18" smashed="yes">
+<attribute name="VALUE" x="210.82" y="40.64" size="1.778" layer="96"/>
 </instance>
 <instance part="FID1" gate="G$1" x="137.16" y="7.62" smashed="yes"/>
 <instance part="FID2" gate="G$1" x="142.24" y="7.62" smashed="yes"/>
@@ -2780,12 +2790,12 @@ VCC: 1.8-5.5V</text>
 <segment>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <pinref part="GND6" gate="1" pin="GND"/>
-<wire x1="226.06" y1="33.02" x2="226.06" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="48.26" x2="203.2" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LED2" gate="G$1" pin="C"/>
 <pinref part="GND7" gate="1" pin="GND"/>
-<wire x1="236.22" y1="33.02" x2="236.22" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="48.26" x2="213.36" y2="45.72" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="J6" gate="G$1" pin="4"/>
@@ -2871,8 +2881,8 @@ VCC: 1.8-5.5V</text>
 </segment>
 <segment>
 <pinref part="R40" gate="G$1" pin="2"/>
-<wire x1="236.22" y1="53.34" x2="236.22" y2="55.88" width="0.1524" layer="91"/>
-<label x="236.22" y="55.88" size="1.27" layer="95" rot="R90" xref="yes"/>
+<wire x1="213.36" y1="68.58" x2="213.36" y2="71.12" width="0.1524" layer="91"/>
+<label x="213.36" y="71.12" size="1.27" layer="95" rot="R90" xref="yes"/>
 </segment>
 <segment>
 <pinref part="J6" gate="G$1" pin="3"/>
@@ -3713,7 +3723,7 @@ VCC: 1.8-5.5V</text>
 <segment>
 <pinref part="R39" gate="G$1" pin="2"/>
 <pinref part="P+5" gate="1" pin="VCC"/>
-<wire x1="226.06" y1="55.88" x2="226.06" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="71.12" x2="203.2" y2="68.58" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+6" gate="1" pin="VCC"/>
@@ -3804,14 +3814,14 @@ VCC: 1.8-5.5V</text>
 <segment>
 <pinref part="LED1" gate="G$1" pin="A"/>
 <pinref part="R39" gate="G$1" pin="1"/>
-<wire x1="226.06" y1="43.18" x2="226.06" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="58.42" x2="203.2" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
 <pinref part="LED2" gate="G$1" pin="A"/>
 <pinref part="R40" gate="G$1" pin="1"/>
-<wire x1="236.22" y1="43.18" x2="236.22" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="213.36" y1="58.42" x2="213.36" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="!RESET" class="0">
